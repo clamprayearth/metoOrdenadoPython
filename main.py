@@ -8,12 +8,24 @@ def selectSort(ordenada):
                 minimo = ordenada[j]
                 indx = j
 
-	    Coloca-se o valor do minimo na respectiva posição.
+	    #Coloca-se o valor do minimo na respectiva posição.
         ordenada[indx] = ordenada[i]
         ordenada[i] = minimo
 
-    txt = "Lista ordenada é: {} "
-    print(txt.format(ordenada))
+def InsetionSort(ordenada):
+    chave = 0
+    i = 0
+	
+    for j in range(1,len(ordenada)):
+        chave = ordenada[j]
+        i = j - 1
+	    #comparação para ver se o valor corrente é o maior entre os elementos ordenados
+        while (i >= 0) and (ordenada[i] > chave):
+            ordenada[i + 1] = ordenada[i]
+            i = i - 1
+
+		#Deslocamento do vetor para a direita
+        ordenada[i + 1] = chave
 
 #Entrada do numero de alementos da lista
 ordenada = [] # Lista final
@@ -33,6 +45,8 @@ ordenada_sort.sort()
 #Decisão de qual metodo utlizar
 if ord == "1":
     selectSort(ordenada)
+elif ord == "2":
+    InsetionSort(ordenada)
 
 #Aqui é escrito dois arquivos com a lista ordenada com o algoritmo e outro com o metodo sort
 for i in range(0,n):    
@@ -44,3 +58,6 @@ for i in range(0,n):
 #Impressão da lista obtida no arquivo teste.txt
 txt = "Lista digitada: {} "
 print(txt.format(original))
+#Impressão da lista ordenada
+txt = "Lista ordenada é: {} "
+print(txt.format(ordenada))

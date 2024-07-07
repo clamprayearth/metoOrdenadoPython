@@ -4,7 +4,7 @@ n = int(input("Quantos elementos terá a lista? "))
 with open("teste.txt", "w") as arquivo:
     txt = str(n)
     arquivo.write(txt)
-ord = input("Usar (1)-SelectSort: ")
+ord = input("Usar (1)-SelectSort (2)-InsetionSort: ")
 with open("teste.txt", "a") as arquivo:
     txt = ord
     arquivo.write("\n"+txt)

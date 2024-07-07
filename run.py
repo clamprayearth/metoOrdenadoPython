@@ -21,12 +21,12 @@ os.system(txt)
 #-------------COMANDO----------------------------------------------------------------------------------------------------------
 if SO == 'Linux':                #Chamada do arquivo .py
     txt = "python3 main.py < teste.txt"
+    os.system(txt)
 else:            
     txt = "Sistema operacional não compativel com o arquivo run.py"                                
     print(txt)
-os.system(txt)
 #------------------------------------------------------------------------------------------------------------------------------
-input ("Enter p/ continuar....") # <-------------------------------------------------------------------------------------------Parada de tela
+
 #-------------COMANDO----------------------------------------------------------------------------------------------------------
 if SO == 'Linux':                #Comando para testar o resultado com o algoritmo e o sort atraves do diff
     txt = "diff resultado.txt modelo.txt"                            
