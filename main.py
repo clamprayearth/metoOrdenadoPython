@@ -10,7 +10,7 @@ def selectSort(ordenada):
 
 	    #Coloca-se o valor do minimo na respectiva posição.
         ordenada[indx] = ordenada[i]
-        #ordenada[i] = minimo
+        ordenada[i] = minimo
 
     txt = "Lista ordenada é: {} "
     print(txt.format(ordenada))
