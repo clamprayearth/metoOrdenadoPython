@@ -8,7 +8,7 @@ def selectSort(ordenada):
                 minimo = ordenada[j]
                 indx = j
 
-	    #Coloca-se o valor do minimo na respectiva posição.
+	    Coloca-se o valor do minimo na respectiva posição.
         ordenada[indx] = ordenada[i]
         ordenada[i] = minimo
 
