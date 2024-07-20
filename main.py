@@ -27,6 +27,17 @@ def InsetionSort(ordenada):
 		#Deslocamento do vetor para a direita
         ordenada[i + 1] = chave
 
+def BubbleSort(ordenada):
+	t =0
+	
+	#Comparação do valor corrente com todos os numeros adjacentes
+	for i in range(len(ordenada), 1, -1):
+		for j in range(1, i):
+			if (ordenada[j-1] > ordenada[j]):
+				t = ordenada[j-1]
+				ordenada[j-1] = ordenada[j]
+				ordenada[j] = t
+
 #Entrada do numero de alementos da lista
 ordenada = [] # Lista final
 original = [] # Lista original
@@ -47,6 +58,8 @@ if ord == "1":
     selectSort(ordenada)
 elif ord == "2":
     InsetionSort(ordenada)
+elif ord == "3":
+    BubbleSort(ordenada)
 
 #Aqui é escrito dois arquivos com a lista ordenada com o algoritmo e outro com o metodo sort
 for i in range(0,n):    
